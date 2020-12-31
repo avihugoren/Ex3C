@@ -86,10 +86,14 @@ int substring( char * str1, char * str2)
 }
 int similar (char *s, char *t)
 {
-    //the length is equal just check if its substring
+    //the length is equal checks that the words are the same
     if(strLegnth(s) == strLegnth(t))
     {
-        return substring(s,t);
+        for (int i = 0; i <strLegnth(t) ; ++i)
+            if (s[i]!=t[i])
+                return 0;
+        return 1;
+
     }
     //if the difference is lengths is bigger then 1 so they cant be similar
     if(strLegnth(s)-1 != strLegnth(t))
