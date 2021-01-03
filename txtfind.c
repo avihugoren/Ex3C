@@ -139,8 +139,8 @@ void print_similar_words(char *str) {
     char word[WORD];
     //runs on the Max lines of the text
     for (int i = 0; i < MAX_LINES; i++)
-        //runs on the maximum words a line can hold (size of line/size of word)
-        for (int j = 0; j < (double)LINE/WORD; ++j)
+        //runs on the maximum words a line can hold (word can be minimum size 1 and between every word there should be a tab)
+        for (int j = 0; j < LINE/2; ++j)
         {
             x = getword(word);//copy the word from the line into word
             //if it similar with str then print it
